@@ -24,7 +24,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MyShop'),
+        title: const Text('Capital Knot City Shop'),
         actions: <Widget>[
           PopupMenuButton(
               onSelected: (FilterOptions selectedValue) {
@@ -47,7 +47,8 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
           Consumer<Cart>(
             builder: (_, cart, ch) => Badge(
               child: ch,
-              value: cart.itemCount.toString()
+              value: cart.itemCount.toString(),
+              color: Colors.red,
           ),
             child: IconButton(
               icon: const Icon(Icons.shopping_cart),
